@@ -9,21 +9,22 @@
     <!-- css stuff -->
     <!-- link to reset -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Karla:700|Poppins:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Mikka Azores</title>
 </head>
 
 <body>
-    <h1>Fun with Modules!</h1>
-    <nav data-module="nav">
-        <!-- nav elements must have nav-item -->
-        <ul>
-            <li><a href="#" class="nav-item">1</a></li>
-            <li><a href="/2" class="nav-item">2</a></li>
-            <li><a href="#section3" class="nav-item">3</a></li>
-            <li><a href="#section4" class="nav-item">4</a></li>
-            <li><a href="#section5" class="nav-item">5</a></li>
-        </ul>
+    <h1 class="hidden">Mikka Azores portfolio</h1>   
+    <nav>
+        <h2 class="hidden">Navigation menu</h2>
+        <div class="logo">
+            <img src="images/logo.svg" alt="Mikka Azores logo">
+        </div>
+
+        <div class="mobile">
+            <img src="images/burger.svg" alt="Burger menu">
+        </div>
     </nav>
 
     <main>
@@ -31,25 +32,35 @@
     </main>
 
     <footer>
-        <p>here's some footer text</p>
+        <div class="logoSection">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Mikka Azores logo">
+            </div>
+        </div>
 
-        <ul>
-            <li><a href="#" class="nav-item">1</a></li>
-            <li><a href="/2" class="nav-item">2</a></li>
-            <li><a href="#section3" class="nav-item">3</a></li>
-            <li><a href="#section4" class="nav-item">4</a></li>
-            <li><a href="#section5" class="nav-item">5</a></li>
-        </ul>
+        <div class="contactSection">
+            <div class="contactSectionCont">
+                <div class="contactCol1">
+                    <h2>Mikka Azores</h2>
+                    <h5>Multimedia Designer and Developer</h5>
+                </div>
+
+                <div class="contactCol2">
+                    <div class="email">
+                        <img src="images/footer-email.svg" alt="email icon"> <h6>mikkaazores@gmail.com</h6>
+                    </div>
+                    
+                    <div class="call">
+                        <img src="images/footer-call.svg" alt="call icon"> <h6>437 987 1819</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <a id="to-top" href="#" class="nav-item">back to top</a>
+    <!--<a id="to-top" href="#" class="nav-item">back to top</a>-->
 
     <script type="module" src="js/main.js"></script>
-    <script>
-        var name = "Justin";
-
-        console.log('name in main file: ' + name);
-    </script>
 
     <!-- templates -> these don't get rendered immediately -->
     <template id="user-template">

@@ -1,13 +1,68 @@
-footer { color: $footer-text-color }
+footer { 
+    color: $red; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-ul {
-    margin: 0;
-    padding: 0;
-
-    li { 
-        display: inline;
-        
-        a { text-decoration: none; }
+    .logoSection {
+        background-color: $navy;
+        width: 100%;
+        padding: 100px 70px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
     }
 
+    h2 {
+        color: $red!important;
+        font-size: 6vh;
+        margin-bottom: 6px;
+    }
+
+    h5 {
+        font-family: $Karla;
+        font-size: 4vh;
+        line-height: 1.2;
+    }
+
+    h6 {
+        font-family: $Karla;
+        font-size: 3vh;
+    }
+
+    .contactSection {
+        background-color: $blue;
+        width: 100%;
+        padding: 80px 40px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .contactCol2 {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        
+            img {
+                margin-right: 10px; 
+            }
+
+            .email {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .call {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    }
 }
+

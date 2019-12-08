@@ -1,6 +1,18 @@
-
 nav {
-    background-color: pink;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo img {
+        width: 140px;
+    }
+
+    .mobile img {
+        height: 50px;
+    }
 
     ul {
         margin: 0;

@@ -1,21 +1,38 @@
 @import '_vars';
+@import 'modules/reset';
 @import 'modules/_navbar';
-@import 'modules/_users';
+@import 'modules/_reel';
+@import 'modules/_works';
 @import 'modules/_lightbox';
+@import 'modules/_about';
+@import 'modules/_contact';
 
 body {
-    color: $main-color;
     background-color: $body-bg;
 }
 
-h1, h2, h3 { color: $heading-color }
+main {
+    width: 85%;
+    margin: 0 auto;
+}
 
-.panel { min-height: 80vh; }
+h1, h2, h3 { font-family: $Poppins; color: $yellow; }
 
-.panel:nth-child(odd) {
+.section-title { 
+    color: $yellow;
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 45px;
+}
+
+.panel { min-height: 80vh; margin-top: 75px; }
+
+.hidden { display: none; }
+
+/*.panel:nth-child(odd) {
     background-color: salmon;
     color: white;
-}
+}*/
 
 #to-top { position: fixed; bottom: 10px; right: 10px; display: none; }
 

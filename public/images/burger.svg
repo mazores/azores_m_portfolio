@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #80cfd4;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="60" height="60"/>
+    </clipPath>
+  </defs>
+  <g id="Burger_Menu" data-name="Burger Menu" class="cls-2">
+    <g transform="translate(-520 -54)">
+      <rect id="Burger_Bar" data-name="Burger Bar" class="cls-3" width="60" height="16" transform="translate(520 54)"/>
+    </g>
+    <g transform="translate(-520 -33)">
+      <rect id="Burger_Bar-2" data-name="Burger Bar" class="cls-3" width="60" height="16" transform="translate(520 54)"/>
+    </g>
+    <g transform="translate(-520 -12)">
+      <rect id="Burger_Bar-3" data-name="Burger Bar" class="cls-3" width="60" height="16" transform="translate(520 54)"/>
+    </g>
+  </g>
+</svg>
