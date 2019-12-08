@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dd1e34;
+        font-size: 24px;
+        font-family: SocialMediaCircled, Social Media Circled;
+      }
+    </style>
+  </defs>
+  <text id="k" class="cls-1" transform="translate(0 20)"><tspan x="0" y="0">k</tspan></text>
+</svg>

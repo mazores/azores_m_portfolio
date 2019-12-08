@@ -1,41 +1,42 @@
-<section id="section1" class="panel">
+<!--<section id="section1" class="panel">
     <div class="bio-info">
         <h1 class="p-name">Some generic info here...</h1>
     </div>
 
+</section>-->
+<section id="reel">
+    <h1 class="hidden">Demo Reel</h1>
+    <div class="reelCont">
+    </div>
 </section>
+
 {{!-- <section id="section2" class="panel">panel 2</section> --}}
-<section id="section3" class="panel">
-    <h1 class="user-panel-heading">
-        Welcome to our awesome team section!
+<section id="works" class="panel">
+    <h1 class="section-title">
+        Works
     </h1>
 
-    <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odit animi, vero perspiciatis
-        accusantium nisi molestiae, nostrum quisquam unde deleniti, expedita dicta ab quae possimus omnis amet!
-        Modi, nemo autem!Ducimus dolorum aliquid id quae vel sapiente, omnis iste fugiat magni rem
-        exercitationem. Facilis voluptatum praesentium animi rem provident, nam rerum reiciendis perspiciatis
-        optio dolorem magnam temporibus neque quo cum.
-    </p>
-
-    <h4>Click on a team member below to learn more about them.</h4>
-
-    <div class="team">
+    <div class="portfolio">
         <!-- loop through all our team members and put their info on the page -->
         {{#each people}} <!-- this is like a  JS forEach loop -->
-        <div class="user-panel">
-            <img src="images/{{FeatureImage}}" alt="user image" class="u-avatar">
-            <a href="{{ID}}" class="u-link">
-                See More Info
-            </a>
+        <div class="port-item">
+            <h2 class="hidden">Portfolio Item - {{Title}}</h2>
+            <a href="{{ID}}">
+                <img src="images/{{FeatureImage}}" alt="portfolio image" class="feature-image">
 
-            <h1>{{Title}}</h1>
-            <h3>{{Category}}</h3>
+            <div class="port-details">
+                <h6>{{Category}}</h3>
+                <h2>{{Title}}</h1>
+            </div>
+            </a>
+            
+            <!--<a href="{{ID}}" class="u-link">
+                See More Info
+            </a>-->
         </div>
         {{/each}}        
     </div>
-    </div>
-
+</section>
     <!-- this will be filled in on the client side when we render our AJAX data -->
     <section class="lightbox">
         <span class="close">x</span>
@@ -47,6 +48,32 @@
 
         </div>
     </section>
+
+<section id="about" class="panel">
+    <h1 class="section-title">
+        About
+    </h1>
+
+    <div class="aboutCont">
+        <h3>Hi, I’m <span class="red">Mikka Azores</span> and I create design solutions that are both <span class="red">beautiful and functional.</span></h3>
+        <button class="resume">Download resume</button>
+    </div>
 </section>
-<section id="section4" class="panel">panel 4</section>
-<section id="section5" class="panel"></section>
+
+<section id="contact" class="panel">
+    <h1 class="section-title">
+        Contact
+    </h1>
+
+    <div class="contactCont">
+        <section class="contactFormContainer">
+            <form action="data/contact.php" method="post">
+                <input id="name" type="text" name="name" placeholder="Name">
+                <input id="email" type="email" name="email" placeholder="E-mail">
+                <textarea id="message" name="message" placeholder="Message"></textarea>
+                
+                <input type="submit" value="Submit" class="button">
+            </form>
+        </section>
+    </div>
+</section>
