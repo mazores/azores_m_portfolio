@@ -22,7 +22,17 @@
 
     <div class="team">
         <!-- loop through all our team members and put their info on the page -->
-        
+        {{#each people}} <!-- this is like a  JS forEach loop -->
+        <div class="user-panel">
+            <img src="images/{{FeatureImage}}" alt="user image" class="u-avatar">
+            <a href="{{ID}}" class="u-link">
+                See More Info
+            </a>
+
+            <h1>{{Title}}</h1>
+            <h3>{{Category}}</h3>
+        </div>
+        {{/each}}        
     </div>
     </div>
 
