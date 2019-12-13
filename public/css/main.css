@@ -77,10 +77,11 @@ nav a {
 
 #reel {
   margin: 0 auto;
-  min-height: 30vh;
-  background-color: #FFCC67;
 }
 #reel .reelCont {
+  width: 100%;
+}
+#reel .reelCont video {
   width: 100%;
 }
 
@@ -161,36 +162,67 @@ nav a {
     max-width: 300px;
   }
 }
+.overflow {
+  overflow: hidden;
+}
+
+.main-width {
+  width: 100% !important;
+}
+
 .lightbox {
   display: none;
-  flex-direction: row;
-  min-height: 100vh;
-  width: 100%;
+  flex-direction: column;
+  height: 100%;
   position: fixed;
   top: 0;
   z-index: 5000;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.85);
+  overflow: auto;
+  background-color: #DD1E3F;
 }
-.lightbox .sidebar {
-  flex: 1;
+.lightbox .lb-Container {
+  width: 100%;
+  padding-bottom: 3vh;
 }
-.lightbox .lb-content {
-  flex: 3;
+.lightbox .feature-hero {
+  margin-bottom: 3vh;
+}
+.lightbox video {
+  width: 100%;
+  margin: 0 auto;
+}
+.lightbox .description {
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+}
+.lightbox .description h2 {
+  color: #80CFD4;
+}
+.lightbox .description p {
+  font-family: "Karla", sans-serif;
+  color: #80CFD4;
+  line-height: 3.5vh;
+}
+.lightbox .portImage {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 3vh;
 }
 .lightbox img {
-  max-width: 250px;
+  max-width: 100%;
 }
 .lightbox .close {
-  right: 24px;
+  right: 10px;
   top: 10px;
   cursor: pointer;
   font-size: 2em;
   position: fixed;
-  border: thin solid white;
   padding: 2px 14px 5px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.25);
+  font-family: "Poppins", sans-serif;
+  color: #80CFD4;
+  z-index: 5000;
 }
 
 .show-lb {
@@ -329,6 +361,13 @@ main {
 h1, h2, h3 {
   font-family: "Poppins", sans-serif;
   color: #FFCC67;
+}
+
+h6 {
+  font-family: "Karla", sans-serif;
+  color: #FFCC67;
+  line-height: 2.5vh;
+  margin-bottom: 2vh;
 }
 
 .section-title {
