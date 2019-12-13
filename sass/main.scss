@@ -18,6 +18,13 @@ main {
 
 h1, h2, h3 { font-family: $Poppins; color: $yellow; }
 
+h6 {
+    font-family: $Karla;
+    color: $yellow;
+    line-height: 2.5vh;
+    margin-bottom: 2vh;
+}
+
 .section-title { 
     color: $yellow;
     text-align: center;

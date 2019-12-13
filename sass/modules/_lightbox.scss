@@ -1,36 +1,71 @@
+.overflow {
+    overflow: hidden;
+}
+
+.main-width {
+    width: 100%!important;
+}
+
 .lightbox { 
     display: none;
     //display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-    width: 100%;
+    flex-direction: column;
+    height: 100%;
     position: fixed;
     top: 0;
     z-index: 5000;
     padding: 20px;
+    overflow: auto;
+    background-color: $red;
 
-    background-color: rgba(0, 0,0, 0.85);
+    .lb-Container {
+        width: 100%;
+        padding-bottom: 3vh;
+    }
 
-    .sidebar {
-        flex: 1;
+    .feature-hero {
+        margin-bottom: 3vh;
+    }
+
+    video {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .description {
+        width: 75%;
+        margin: 0 auto;
+        margin-bottom: 5vh;
+
+        h2 {
+            color: $blue;
+        }
+
+        p {
+            font-family: $Karla;
+            color: $blue;
+            line-height: 3.5vh;
+        }
     }
     
-    .lb-content {
-        flex: 3;
+    .portImage {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 3vh; 
     }
 
-    img { max-width: 250px; }
+    img { max-width: 100%; }
 
     .close {    
-        right: 24px;
+        right: 10px;
         top: 10px;
         cursor: pointer;
         font-size: 2em;
         position: fixed;
-        border: thin solid white;
         padding: 2px 14px 5px;
-        border-radius: 50%;
-        background-color: rgba(255,255,255,0.25);
+        font-family: $Poppins;
+        color: $blue;
+        z-index: 5000;
     }
 }
 

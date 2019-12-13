@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/users/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     // should really get the user data here and then fetch it thru, but let's try this asynchronously
     console.log('at the user route');
     console.log(req.params.id); // 1, 2, 3 or whatever comes after the slash
@@ -39,15 +39,16 @@ router.get('/users/:id', (req, res) => {
             // item.trim() removes any empty white space from text
 
             // //return item;
-        })
+        res.json(result[0]);
+    })
 
         // //console.log("after trim / converion:", result[0]);
 
         // render the home view with dynamic data
-        res.render('home', { people: result }); // data is all the details on the db, you can call it whatever you want
+        // res.render('home', { people: result }); // data is all the details on the db, you can call it whatever you want
         //can be team, can be people, can be data; result can't be changed
-        res.json(result[0]);
-    })
+        
+})
 
 module.exports = router;
 

@@ -1,9 +1,11 @@
 #reel {
     margin: 0 auto;
-    min-height: 30vh;
-    background-color: $yellow;
 
     .reelCont {
         width: 100%;
+
+        video {
+            width: 100%;
+        }
     }
 }
