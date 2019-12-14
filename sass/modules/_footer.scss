@@ -3,6 +3,8 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    z-index: 3;
+    position: relative;
 
     .logoSection {
         background-color: $navy;
