@@ -5,6 +5,13 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
 
     .logo img {
         width: 140px;
@@ -23,3 +30,85 @@ nav {
 
     a { text-decoration: none; }
 }
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: -100%;
+    z-index: 5000;
+    padding: 20px;
+    overflow: hidden;
+    background-color: $yellow;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    -webkit-transition-property: top;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-property: top;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+
+    .burger-controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+        padding-bottom: 30px;
+
+        .logo img {
+            width: 140px;
+        }
+    
+        .close {    
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            font-size: 2em;
+            padding: 2px 14px 5px;
+            font-family: $Poppins;
+            color: $red;
+            z-index: 5000;
+        }
+    
+        .close:hover {
+            color: $blue;
+        }
+    
+
+    }
+    
+    ul {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+
+        li {
+            padding: 15px 0;
+
+            a {
+                text-decoration: none;
+                font-family: $Poppins;
+                color: $blue;
+                text-align: center;
+                margin: 0 auto;
+                font-size: 8vh;
+            }
+
+            a:hover {
+                color: $red;
+            }
+        }
+    }
+}
+
+.show-lb { display: flex !important; }
+
+.show-burger { top: 0 !important; }

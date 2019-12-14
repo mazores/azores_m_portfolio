@@ -4,7 +4,10 @@ const myVM = (() => {
     // get the user buttons and fire off an async DB query with Fetch
     let userButtons = document.querySelectorAll('.u-link'),
         lightBox = document.querySelector('.lightbox'),
-        body = document.body;
+        body = document.body,
+        burgerButton = document.querySelector('.mobile'),
+        burgerMenu = document.querySelector('.burger-menu'),
+        burgerOptions = document.querySelectorAll('.burger-option');
 
     function parseUserData(portItem) {
         let targetFeat = lightBox.querySelector('.feature-hero'),
@@ -80,18 +83,32 @@ const myVM = (() => {
 
     function stopVideo() {
         let videoHero = document.querySelector('.hero-video');
-
         videoHero.pause();
         videoHero.currentTime = 0;
     }
 
+    function closeMenu() {
+        burgerMenu.classList.remove('show-burger');
+    };
+
     userButtons.forEach(button => button.addEventListener("click", getUserData));
+    burgerOptions.forEach(menu => menu.addEventListener("click", closeMenu));
+    lightBox.querySelector('.close').addEventListener("click", stopVideo);
 
     // wire up the lightbox close button
     lightBox.querySelector('.close').addEventListener("click", function() {
         lightBox.classList.remove('show-lb');
         body.classList.remove('overflow');
     });
+    
+    // wire up the menu from burger menu
+    burgerButton.addEventListener("click", function() {
+        burgerMenu.classList.add('show-burger');
+        body.classList.add('overflow');
+    });
 
-    lightBox.querySelector('.close').addEventListener("click", stopVideo);
+    burgerMenu.querySelector('.close').addEventListener("click", function() {
+        burgerMenu.classList.remove('show-burger');
+        body.classList.remove('overflow');
+    });
 })();
