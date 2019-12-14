@@ -6,13 +6,14 @@
 @import 'modules/_lightbox';
 @import 'modules/_about';
 @import 'modules/_contact';
+@import 'modules/_fixedtext';
 
 body {
     background-color: $body-bg;
 }
 
 main {
-    width: 85%;
+    width: 80%;
     padding-top: 25vh;
     margin: 0 auto;
 }
