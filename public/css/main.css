@@ -172,10 +172,10 @@ nav a {
 
 @media screen and (min-width: 768px) {
   nav {
-    padding: 40px 70px;
+    padding: 20px 70px;
   }
   nav .logo img {
-    width: 320px;
+    width: 235px;
   }
   nav .mobile img {
     height: 60px;
@@ -198,6 +198,12 @@ nav a {
   }
 }
 @media screen and (min-width: 1280px) {
+  nav {
+    padding: 30px 100px 0 100px;
+  }
+  nav .logo img {
+    width: 235px;
+  }
   nav .mobile {
     display: none;
   }
@@ -210,10 +216,19 @@ nav a {
   }
   nav .desktop-nav ul li {
     display: inline;
+    margin-right: 50px;
   }
   nav .desktop-nav ul li a {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    color: #80CFD4;
+  }
+  nav .desktop-nav ul li a:hover {
+    color: #DD1E3F;
+  }
+  nav .desktop-nav ul li a:active {
+    color: #DD1E3F;
   }
 }
 #reel {
@@ -231,16 +246,6 @@ nav a {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /*.u-link { 
-      display: block; 
-      //width: 150px;  
-      text-decoration: none;
-      margin: 0 auto;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 5px;
-  }
-
-  h1, h3 { margin: 5px 0; }*/
 }
 .portfolio .port-item {
   flex: 0 1 200px;
@@ -295,6 +300,17 @@ nav a {
   line-height: 1.2;
 }
 
+@media screen and (min-width: 435px) {
+  .portfolio .port-item {
+    margin-bottom: 150px;
+  }
+  .portfolio .port-item .port-details {
+    bottom: -60px;
+  }
+  .portfolio .port-item::nth-child(even) {
+    margin-bottom: 200px;
+  }
+}
 @media screen and (min-width: 768px) {
   .portfolio .port-item .port-details {
     width: 40%;
@@ -305,6 +321,66 @@ nav a {
     width: 40%;
     bottom: -50px;
     padding: 30px;
+  }
+}
+@media screen and (min-width: 820px) {
+  .portfolio .port-item {
+    margin-bottom: 250px;
+  }
+  .portfolio .port-item:nth-child(even) {
+    margin-bottom: 250px;
+  }
+}
+@media screen and (min-width: 930px) {
+  .portfolio .port-item .port-details {
+    bottom: 170px;
+  }
+  .portfolio .port-item:nth-child(even) .port-details {
+    bottom: -100px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .portfolio {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .portfolio .port-item {
+    margin-bottom: 100px;
+  }
+  .portfolio .port-item .feature-image {
+    max-width: 65%;
+    flex: 2 1 auto;
+    margin-bottom: 90px;
+  }
+  .portfolio .port-item .port-details {
+    bottom: 220px;
+    padding: 30px;
+  }
+  .portfolio .port-item:nth-child(even) {
+    margin-bottom: 100px;
+  }
+  .portfolio .port-item:nth-child(even) .port-details {
+    bottom: 0;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .portfolio .port-item, .portfolio .port-item:nth-child(even) {
+    margin-bottom: 250px;
+  }
+  .portfolio .port-item .feature-image, .portfolio .port-item:nth-child(even) .feature-image {
+    width: 100%;
+    flex: 3 1 auto;
+  }
+  .portfolio .port-item:nth-child(even) .port-details {
+    bottom: -100px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .portfolio .port-item {
+    margin-bottom: 300px;
+  }
+  .portfolio .port-item:nth-child(even) {
+    margin-bottom: 300px;
   }
 }
 .overflow {
@@ -329,6 +405,7 @@ nav a {
 .lightbox .lb-Container {
   width: 100%;
   padding-bottom: 3vh;
+  text-align: center;
 }
 .lightbox .feature-hero {
   margin-bottom: 3vh;
@@ -366,6 +443,7 @@ nav a {
   position: fixed;
   padding: 2px 14px 5px;
   font-family: "Poppins", sans-serif;
+  font-weight: 700;
   color: #80CFD4;
   z-index: 5000;
 }
@@ -386,6 +464,27 @@ nav a {
   }
   .lightbox .description p {
     line-height: 2vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .lightbox {
+    padding: 100px;
+  }
+  .lightbox .lb-Container {
+    padding-bottom: 20vh;
+  }
+  .lightbox .description {
+    width: 50%;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .lightbox .description p {
+    line-height: 4vh;
+    font-size: 20px;
+  }
+  .lightbox .portImage {
+    margin-bottom: 8vh;
   }
 }
 #about {
@@ -422,6 +521,11 @@ nav a {
   font-family: "Karla", sans-serif;
   color: #003751;
   font-size: 18px;
+  border: none;
+}
+#about .aboutCont button a {
+  text-decoration: none;
+  color: #003751;
 }
 
 @media screen and (min-width: 768px) {
@@ -430,6 +534,15 @@ nav a {
   }
   #about .aboutCont button {
     width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #about .aboutCont {
+    padding: 100px 150px 90px 150px;
+  }
+  #about .aboutCont button {
+    width: 30%;
+    padding: 10px 0;
   }
 }
 #contact {
@@ -520,6 +633,11 @@ nav a {
     margin: initial;
   }
 }
+@media screen and (min-width: 1280px) {
+  #contact .contactCont {
+    padding: 100px 280px;
+  }
+}
 .fixedtextCont {
   display: flex;
   flex-direction: row;
@@ -581,6 +699,23 @@ nav a {
     font-size: 2em;
   }
 }
+@media screen and (min-width: 1280px) {
+  .fixedtextCont {
+    padding-top: 60vh;
+  }
+
+  .name {
+    left: 40px;
+  }
+
+  .title {
+    right: 40px;
+  }
+
+  .name h4, .title h4 {
+    font-size: 1.8em;
+  }
+}
 body {
   background-color: white;
 }
@@ -631,6 +766,18 @@ h6 {
 }
 
 @media screen and (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 38px;
+  }
+
   h6 {
     margin-bottom: 0.8vh;
   }
@@ -657,11 +804,13 @@ footer h2 {
   margin-bottom: 6px;
 }
 footer h5 {
+  color: #DD1E3F;
   font-family: "Karla", sans-serif;
   font-size: 4vh;
   line-height: 1.2;
 }
 footer h6 {
+  color: #DD1E3F;
   font-family: "Karla", sans-serif;
   font-size: 3vh;
 }
@@ -721,6 +870,39 @@ footer .contactSection .contactCol2 .call {
     flex: 2 1 auto;
     padding: 60px 60px 60px 40px;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  footer .logoSection {
+    padding-left: 120px;
+  }
+  footer .contactSection {
+    padding: 110px 130px 110px 110px;
+  }
+  footer .contactSection .contactSectionCont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  footer .contactSection .contactSectionCont .contactCol1 {
+    width: 250px;
+    margin-right: 50px;
+  }
+  footer .contactSection .contactSectionCont .contactCol2 img {
+    padding-top: 10px;
+    width: 40px;
+  }
+  footer h2 {
+    font-size: 5vh;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  footer h5 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  footer h6 {
+    font-size: 24px;
   }
 }
 

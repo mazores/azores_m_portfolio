@@ -58,21 +58,25 @@
             }
         }
     }
-        
-        /*.u-link { 
-            display: block; 
-            //width: 150px;  
-            text-decoration: none;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 5px;
+}
+
+@media screen and (min-width: 435px) {
+    .portfolio {
+        .port-item {
+            margin-bottom: 150px;
+
+            .port-details {
+                bottom: -60px;
+            }
         }
 
-        h1, h3 { margin: 5px 0; }*/
+        .port-item::nth-child(even) {
+            margin-bottom: 200px;
+        }
+    }
 }
 
 // TABLET //
-
 @media screen and (min-width: 768px) {
     .portfolio {
         .port-item {
@@ -89,6 +93,97 @@
                 bottom: -50px;
                 padding: 30px;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 820px) {
+   .portfolio {
+       .port-item {
+           margin-bottom: 250px;
+       }
+
+       .port-item:nth-child(even) {
+            margin-bottom: 250px;
+       }
+   } 
+}
+
+@media screen and (min-width: 930px) {
+    .portfolio {
+        .port-item {
+            .port-details { 
+                bottom: 170px;
+            }
+        }
+
+        .port-item:nth-child(even) {
+            .port-details {
+                bottom: -100px;
+            }
+        }
+    }
+}
+
+// DESKTOP //
+@media screen and (min-width: 1000px) {
+    .portfolio {
+        width: 75%;
+        margin: 0 auto;
+
+        .port-item {
+            margin-bottom: 100px;
+
+            .feature-image {
+                max-width: 65%;
+                flex: 2 1 auto;
+                margin-bottom: 90px;
+            }
+
+            .port-details {
+                bottom: 220px;
+                padding: 30px;
+            }
+        }
+
+        .port-item:nth-child(even) {
+            margin-bottom: 100px;
+            .port-details {
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .portfolio {
+        .port-item, .port-item:nth-child(even) {
+            margin-bottom: 250px; 
+
+            .feature-image {
+                width: 100%;
+                flex: 3 1 auto;
+            }
+        }
+
+        .port-item:nth-child(even) {
+            .port-details {
+                bottom: -100px;
+            }
+        }
+
+        
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .portfolio {
+        .port-item {
+            margin-bottom: 300px;
+        }
+
+        .port-item:nth-child(even) {
+            margin-bottom: 300px;
         }
     }
 }
