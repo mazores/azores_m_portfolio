@@ -37,3 +37,16 @@
         }
     }
 }
+
+// TABLET //
+@media screen and (min-width: 768px) {
+    #about {
+        .aboutCont {
+            padding: 100px 100px 90px 100px;
+
+            button {
+                width: 50%;
+            }
+        }
+    }
+}

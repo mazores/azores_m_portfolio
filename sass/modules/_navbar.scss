@@ -13,6 +13,10 @@ nav {
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
 
+    .desktop-nav {
+        display: none;
+    }
+
     .logo img {
         width: 140px;
     }
@@ -112,3 +116,66 @@ nav {
 .show-lb { display: flex !important; }
 
 .show-burger { top: 0 !important; }
+
+
+// TABLET //
+@media screen and (min-width: 768px) {
+    nav {
+        padding: 40px 70px;
+
+        .logo img {
+            width: 320px;
+        }
+
+        .mobile img {
+            height: 60px;
+        }
+    }
+
+    .burger-menu {
+        padding: 70px;
+
+        ul {
+            li {
+                padding: 30px 0;
+            }
+        }
+
+        .burger-controls {
+            padding-bottom: 60px;
+
+            .logo img {
+                width: 320px;
+            }
+
+            .close {
+                font-size: 5em;
+            }
+        }
+
+    }
+}
+
+// DESKTOP //
+@media screen and (min-width: 1280px) {
+    nav {
+        .mobile {
+            display: none;
+        }
+
+        .desktop-nav {
+            display: block;
+
+            ul {
+                margin: 0;
+                padding: 0;
+        
+                li { display: inline; 
+                
+                    a { text-decoration: none; font-family: $Poppins; }
+
+                }
+            }
+        }
+    }
+}
