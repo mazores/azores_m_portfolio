@@ -121,10 +121,10 @@ nav {
 // TABLET //
 @media screen and (min-width: 768px) {
     nav {
-        padding: 40px 70px;
+        padding: 20px 70px;
 
         .logo img {
-            width: 320px;
+            width: 235px;
         }
 
         .mobile img {
@@ -159,6 +159,11 @@ nav {
 // DESKTOP //
 @media screen and (min-width: 1280px) {
     nav {
+        padding: 30px 100px 0 100px;
+
+        .logo img {
+            width: 235px;
+        }
         .mobile {
             display: none;
         }
@@ -170,9 +175,24 @@ nav {
                 margin: 0;
                 padding: 0;
         
-                li { display: inline; 
+                li { 
+                    display: inline; 
+                    margin-right: 50px;
                 
-                    a { text-decoration: none; font-family: $Poppins; }
+                    a { 
+                        text-decoration: none;
+                        font-family: $Poppins;
+                        font-size: 40px;
+                        color: $blue;
+                    }
+
+                    a:hover {
+                        color: $red;
+                    }
+
+                    a:active {
+                        color: $red;
+                    }
 
                 }
             }

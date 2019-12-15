@@ -101,5 +101,13 @@
             }
         }
     }
+}
 
+// DESKTOP //
+@media screen and (min-width: 1280px) {
+    #contact {
+        .contactCont {
+            padding: 100px 280px;
+        }
+    }
 }

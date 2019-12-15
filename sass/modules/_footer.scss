@@ -22,12 +22,14 @@ footer {
     }
 
     h5 {
+        color: $red;
         font-family: $Karla;
         font-size: 4vh;
         line-height: 1.2;
     }
 
     h6 {
+        color: $red;
         font-family: $Karla;
         font-size: 3vh;
     }
@@ -98,6 +100,56 @@ footer {
             flex: 2 1 auto;
             padding: 60px 60px 60px 40px;
             justify-content: center;
+        }
+    }
+}
+
+@media screen and (min-width: 860px) {
+
+}
+
+// DESKTOP //
+@media screen and (min-width: 1280px) {
+    footer {
+        .logoSection {
+            padding-left: 120px;
+        }
+
+        .contactSection {
+            padding: 110px 130px 110px 110px;
+
+            .contactSectionCont {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+
+                .contactCol1 {
+                    width: 250px;
+                    margin-right: 50px;
+                }
+
+                .contactCol2 {
+                    img {
+                        padding-top: 10px;
+                        width: 40px;
+                    }
+                }
+            }
+        }
+
+        h2 {
+            font-size: 5vh;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+    
+        h5 {
+            font-size: 24px;
+            line-height: 1.2;
+        }
+    
+        h6 {
+            font-size: 24px;
         }
     }
 }

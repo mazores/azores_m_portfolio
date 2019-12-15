@@ -19,7 +19,7 @@ const myVM = (() => {
             //targetImg = lightBox.querySelector('img');
 
         let featured = `
-            <video class="hero-video" controls="controls">
+            <video class="hero-video" controls loop>
                 <source src="images/${portItem.Hero}" type="video/mp4">
             </video>
         `;

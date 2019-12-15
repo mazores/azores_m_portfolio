@@ -8,7 +8,6 @@
 
 .lightbox { 
     display: none;
-    //display: flex;
     flex-direction: column;
     height: 100%;
     position: fixed;
@@ -21,6 +20,7 @@
     .lb-Container {
         width: 100%;
         padding-bottom: 3vh;
+        text-align: center;
     }
 
     .feature-hero {
@@ -64,6 +64,7 @@
         position: fixed;
         padding: 2px 14px 5px;
         font-family: $Poppins;
+        font-weight: 700;
         color: $blue;
         z-index: 5000;
     }
@@ -79,7 +80,7 @@
         .lb-Container {
             padding-bottom: 5vh;
         }
-        
+
         .description {
 
             h6 {
@@ -91,4 +92,32 @@
             }
         }
     }
+}
+
+// DESKTOP //
+@media screen and (min-width: 1280px) {
+    .lightbox {
+        padding: 100px;
+
+        .lb-Container {
+            padding-bottom: 20vh;
+        }
+
+        .description {
+            width: 50%;
+            text-align: left;
+            padding-top: 70px;
+            padding-bottom: 70px;
+
+            p {
+                line-height: 4vh;
+                font-size: 20px;
+            }
+        }
+
+        .portImage {
+            margin-bottom: 8vh;
+        }
+    }
+
 }

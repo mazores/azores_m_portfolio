@@ -34,6 +34,12 @@
             font-family: $Karla;
             color: $navy;
             font-size: 18px;
+            border: none;
+            
+            a {
+                text-decoration: none;
+                color: $navy;
+            }
         }
     }
 }
@@ -46,6 +52,20 @@
 
             button {
                 width: 50%;
+            }
+        }
+    }
+}
+
+// DESKTOP //
+@media screen and (min-width: 1280px) {
+    #about {
+        .aboutCont {
+            padding: 100px 150px 90px 150px;
+
+            button {
+                width: 30%;
+                padding: 10px 0;
             }
         }
     }
