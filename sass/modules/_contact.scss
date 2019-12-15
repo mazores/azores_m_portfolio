@@ -86,3 +86,20 @@
         }
     }
 }
+
+// TABLET //
+@media screen and (min-width: 768px) {
+    #contact {
+        .contactCont {
+            padding: 80px 100px 70px 100px;
+
+            form {
+                input[type=submit] {
+                    text-align: left;
+                    margin: initial;
+                }
+            }
+        }
+    }
+
+}

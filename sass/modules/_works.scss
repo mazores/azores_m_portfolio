@@ -5,13 +5,11 @@
     justify-content: space-evenly;
 
     .port-item {
-        /*flex: 0 1 200px;
-        text-align: center;
-        padding: 8px;*/
+        flex: 0 1 200px;
         position: relative;
         margin-bottom: 140px;
 
-        .feature-image { max-width: 200px; }
+        .feature-image { max-width: 70%; flex: 1 1 auto; }
 
         .port-details { 
             background-color: $red; 
@@ -40,7 +38,7 @@
     }
 
     .port-item:nth-child(even) {
-        .feature-image { max-width: 200px; float: right; }
+        .feature-image { max-width: 70%; flex: 1 1 auto; float: right; }
 
         .port-details { 
             background-color: $blue; 
@@ -73,13 +71,24 @@
         h1, h3 { margin: 5px 0; }*/
 }
 
-@media screen and (min-width: 900px) {
-    .team {
-        .user-panel { 
-            flex: 1 1;
+// TABLET //
 
-            .u-avatar { max-width: 300px; }
+@media screen and (min-width: 768px) {
+    .portfolio {
+        .port-item {
+            .port-details { 
+                width: 40%;
+                bottom: 150px;
+                padding: 30px;
+            }
+        }
+
+        .port-item:nth-child(even) {
+            .port-details {
+                width: 40%;
+                bottom: -50px;
+                padding: 30px;
+            }
         }
     }
 }
-

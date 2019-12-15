@@ -43,3 +43,25 @@
         text-align: center;
     }
 }
+
+
+// TABLET //
+@media screen and (min-width: 768px) {
+    .fixedtextCont {
+        padding-top: 60vh;
+    }
+    
+    .name {
+        left: 20px;
+    }
+
+    .title {
+        right: 20px;
+    }
+
+    .name, .title {
+        h4 {
+            font-size: 2em;
+        }
+    }
+}
