@@ -1,26 +1,17 @@
 {
-  "name": "testmodules",
-  "homepage": "http://mikkaazores.com",
-  "version": "1.0.0",
-  "description": "using classes with node and express",
-  "main": "app.js",
+  "name": "mikka-azores-portfolio",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mazores/azores_m_portfolio"
-  },
-  "keywords": [
-    "classes",
-    "node",
-    "javascript"
-  ],
-  "author": "MA",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "hbs": "^4.0.6",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
     "mysql": "^2.17.1",
     "scroll-js": "^3.1.0",
     "scroll-to": "0.0.2"
@@ -29,3 +20,4 @@
     "nodemon": "^2.0.1"
   }
 }
+
