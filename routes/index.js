@@ -24,22 +24,16 @@ router.get('/', (req, res) => {
         res.render('home', { people: result });
     })
     })
-});
+})
 
 router.get('/:id', (req, res) => {
     // should really get the user data here and then fetch it thru, but let's try this asynchronously
     console.log('at the user route');
     console.log(req.params.id); // 1, 2, 3 or whatever comes after the slash
-
-    sql.getConnection((err, connection) => {
-        if (err) { return console.log(err.message); }
         
     let query = `SELECT * FROM tbl_portitem WHERE ID="${req.params.id}"`;
 
     sql.query(query, (err, result) => {
-
-        connection.release(); // send this connection back to the pool
-
         if (err) { throw err; console.log(err); }
 
         console.log(result); // should see objects wrapped in an array
@@ -53,8 +47,7 @@ router.get('/:id', (req, res) => {
 
             // //return item;
         res.json(result[0]);
-    })
-})
+    });
 });
 
         // //console.log("after trim / converion:", result[0]);
