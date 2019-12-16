@@ -16,14 +16,16 @@ const myVM = (() => {
             targetImg2 = lightBox.querySelector('.port-image-2'),
             targetImg3 = lightBox.querySelector('.port-image-3'),
             targetImg4 = lightBox.querySelector('.port-image-4');
-            //targetImg = lightBox.querySelector('img');
 
+        // CONTENT
+        // Featured Video
         let featured = `
             <video class="hero-video" controls loop>
                 <source src="images/${portItem.Hero}" type="video/mp4">
             </video>
         `;
 
+        // Description of Project
         let description = `
             <h6>${portItem.Category}</h6>
             <h2>${portItem.Title}</h2>
@@ -32,6 +34,7 @@ const myVM = (() => {
             <p>${portItem.Description}</p>
         `;
 
+        // Project Images
         let portImage1 = `
             <img src="images/${portItem.Image1}" alt="Portfolio Item 1" class="lb-photo" onerror="this.style.display='none'"></img>
         `;
@@ -48,6 +51,7 @@ const myVM = (() => {
             <img src="images/${portItem.Image4}" alt="Portfolio Item 4" class="lb-photo" onerror="this.style.display='none'"></img>
         `;
 
+        // Targeting the HTML of each content
         targetFeat.innerHTML = featured;
         targetDesc.innerHTML = description;
         targetImg1.innerHTML = portImage1;
@@ -55,7 +59,10 @@ const myVM = (() => {
         targetImg3.innerHTML = portImage3;
         targetImg4.innerHTML = portImage4;
 
+        // Opens the lightbox
         lightBox.classList.add('show-lb');
+
+        // Stops body from scrolling
         body.classList.add('overflow');
     }
 
@@ -81,32 +88,41 @@ const myVM = (() => {
             });
     }
 
+    // Stop video when lightbox is closed
     function stopVideo() {
         let videoHero = document.querySelector('.hero-video');
         videoHero.pause();
         videoHero.currentTime = 0;
     }
 
+    // Closes lightbox when X is clicked
     function closeMenu() {
         burgerMenu.classList.remove('show-burger');
     };
 
+
+    // clicking each portfolio item
     userButtons.forEach(button => button.addEventListener("click", getUserData));
+    
+    // clicking X on burger menu
     burgerOptions.forEach(menu => menu.addEventListener("click", closeMenu));
+
+    // clicking X on lightbox (stopping video)
     lightBox.querySelector('.close').addEventListener("click", stopVideo);
 
-    // wire up the lightbox close button
+    // wclicking the X in lightbox
     lightBox.querySelector('.close').addEventListener("click", function() {
         lightBox.classList.remove('show-lb');
         body.classList.remove('overflow');
     });
     
-    // wire up the menu from burger menu
+    // clicking the burger menu
     burgerButton.addEventListener("click", function() {
         burgerMenu.classList.add('show-burger');
         body.classList.add('overflow');
     });
 
+    // clicking the X in burger menu
     burgerMenu.querySelector('.close').addEventListener("click", function() {
         burgerMenu.classList.remove('show-burger');
         body.classList.remove('overflow');
