@@ -30,10 +30,10 @@
 
         <div class="desktop-nav">
             <ul>
-                <li><a href="#reel">reel</a></li>
-                <li><a href="#works">works</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a href="#reel" id="scroll-reel">reel</a></li>
+                <li><a href="#works" id="scroll-works">works</a></li>
+                <li><a href="#about" id="scroll-about">about</a></li>
+                <li><a href="#contact" id="scroll-contact">contact</a></li>
             </ul>
         </div>
     </nav>
@@ -152,6 +152,19 @@
     <!--<a id="to-top" href="#" class="nav-item">back to top</a>-->
 
     <script type="module" src="js/main.js"></script>
+    <!--<script type="module">
+        import { scrollTo } from '../dist/scroll.min.js';
+        const scrollAbout = document.getElementById("scroll-about");
+        const about = document.querySelector("#about");
+        //const pink = document.querySelector(".pink");
+
+        scrollAbout.onclick = function () {
+            scrollTo(about, {duration: 1000}).then(function () {
+            console.log('finished scrolling to green box!');
+            });
+        };
+    </script>
+    -->
 
     <!-- templates -> these don't get rendered immediately -->
     <template id="user-template">
